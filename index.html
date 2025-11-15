@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You be mine for foreverr miss Chestha? 💖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dear Babeu, 💕</h1>
+        <p>From the moment I met you, you've made my world brighter. Your smile, your laugh, your kindness—everything and even your big nose seems perfect to me(and every mole of each part of u). I can't imagine my life without you and ur daya wali hansi ..so choose wisely ❤️</p>
+        <p>So, miss Chestha, will you make me the happiest person ever ever on our love anniversary? 💘</p>
+        <div class="buttons">
+            <button onclick="alert('Yay! I lust you bht bht! 💍')">Yes! 💖</button>
+            <button id="maybeButton" onclick="alert('Wrong Answer')">Maybe 💔</button>
+        </div>
+        <p class="footer">With all my love, Urs.. 💞</p>
+    </div>
+
+    <script>
+        // Get the Maybe button
+        const maybeButton = document.getElementById('maybeButton');
+
+        // Function to move the button to a random position
+        function moveButton() {
+            const container = document.querySelector('.container');
+            const containerRect = container.getBoundingClientRect();
+            
+            // Random position within the container (but not too close to edges)
+            const maxX = containerRect.width - maybeButton.offsetWidth - 20;
+            const maxY = containerRect.height - maybeButton.offsetHeight - 20;
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+            
+            maybeButton.style.position = 'absolute';
+            maybeButton.style.left = randomX + 'px';
+            maybeButton.style.top = randomY + 'px';
+        }
+
+        // Trigger movement on hover or click
+        maybeButton.addEventListener('mouseenter', moveButton);
+        maybeButton.addEventListener('click', function() {
+            alert('No worries, we can talk about it!');
+            // Optional: Move it again after the alert
+            setTimeout(moveButton, 100);
+        });
+    </script>
+</body>
+</html>
